@@ -1,0 +1,11 @@
+.wallpaper {
+    background: url("../Tic-Tac-Toe-Game/img/teste.bmp");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-color: rgb(21, 7, 40)
+}
+
+.oi {
+    color:blue;
+}
