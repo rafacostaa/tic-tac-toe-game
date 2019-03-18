@@ -21,8 +21,11 @@
 <!--NAVBAR--> 
 <nav>
   
-  <h3>tic tac toe game</h3>
-
+  <h3 id="10">tic tac toe game</h3>
+    <div id="dvmenu">
+      <button  type="button" class="" >Level 1</button>
+      <button  type="button" class="" >Level 2</button>
+    </div>
  
 
 </nav>
@@ -30,19 +33,21 @@
 <section>
   <!--BOARD-->
   <div id="board" class="board">
-    <div id="1" class="item-board" onclick="show()"></div>
-    <div id="2" class="item-board" onclick="show()"></div>
-    <div id="3" class="item-board" onclick="show()"></div>
+    <div id="id1" class="item-board" onclick="play(1)"></div>
+    <div id="id2" class="item-board" onclick="play(2)"></div>
+    <div id="id3" class="item-board" onclick="play(3)"></div>
 
-    <div id="4" class="item-board" onclick="show()"></div>
-    <div id="5" class="item-board" onclick="show()"></div>
-    <div id="6" class="item-board" onclick="show()"></div>
+    <div id="id4" class="item-board" onclick="play(4)"></div>
+    <div id="id5" class="item-board" onclick="play(5)"></div>
+    <div id="id6" class="item-board" onclick="play(6)"></div>
 
-    <div id="7" class="item-board" onclick="show()"></div>
-    <div id="8" class="item-board" onclick="show()"></div> 
-    <div id="9" class="item-board" onclick="show()"></div>
+    <div id="id7" class="item-board" onclick="play(7)"></div>
+    <div id="id8" class="item-board" onclick="play(8)"></div> 
+    <div id="id9" class="item-board" onclick="play(9)"></div>
 
   </div>
+
+  
 
   <!--SCOREBOARD-->
   <aside class="scoreboard">
@@ -61,10 +66,11 @@
     
 <!--BUTTON START-->
 <div class="btn-block">
-  <button id="button" type="button" class="btn" onclick="start()">start</button>
+  <button id="button" type="button" class="btn" onclick="startGame()">start</button>
 </div>
    
 <script src="../Tic-Tac-Toe-Game/main.js" type="text/javascript"></script>
+
 
     
 </body>
