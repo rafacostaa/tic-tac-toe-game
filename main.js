@@ -1,36 +1,4 @@
 
-//OPÇAO 1 ON CLICK
-/*
-document.getElementById("1").addEventListener("click", function(){
-document.getElementById("1").innerHTML = "hello";
-});
-document.getElementById("2").addEventListener("click", function(){
-document.getElementById("2").innerHTML = "<img src='../Tic-Tac-Toe-Game/img/logo_darkblue.png' width='130' height='130'>";
-});
-document.getElementById("3").addEventListener("click", function(){
-document.getElementById("3").innerHTML = "<img src='../Tic-Tac-Toe-Game/img/logo_darkblue.png' width='130' height='130'>";
-});
-document.getElementById("4").addEventListener("click", function(){
-document.getElementById("4").innerHTML = "<img src='../Tic-Tac-Toe-Game/img/logo_darkblue.png' width='130' height='130'>";
-});
-document.getElementById("5").addEventListener("click", function(){
-document.getElementById("5").innerHTML = "<img src='../Tic-Tac-Toe-Game/img/logo_darkblue.png' width='130' height='130'>";
-});
-document.getElementById("6").addEventListener("click", function(){
-document.getElementById("6").innerHTML = "<img src='../Tic-Tac-Toe-Game/img/logo_darkblue.png' width='130' height='130'>";
-});
-document.getElementById("7").addEventListener("click", function(){
-document.getElementById("7").innerHTML = "<img src='../Tic-Tac-Toe-Game/img/logo_darkblue.png' width='130' height='130'>";
-});
-document.getElementById("8").addEventListener("click", function(){
-document.getElementById("8").innerHTML = "<img src='../Tic-Tac-Toe-Game/img/logo_darkblue.png' width='130' height='130'>";
-});
-document.getElementById("9").addEventListener("click", function(){
-document.getElementById("9").innerHTML = "<img src='../Tic-Tac-Toe-Game/img/logo_darkblue.png' width='130' height='130'>";
-});
-*/
-
-
 //recebe o controle, guarda as posições das jogadas
 var game=[];
 //controla elementos HTML da variavel game
@@ -46,8 +14,11 @@ var level = 1;
 var turnCpu = 1;
 var whoStart = 1;
 
+//FUNÇÃO PARA PUXAR IMAGENS NO CLICK
 //const = img1
 //const = img2
+//document.getElementById("9").addEventListener("click", function(){
+//document.getElementById("9").innerHTML = "<img src='../Tic-Tac-Toe-Game/img/logo_darkblue.png' width='130' height='130'>";
 
 //jogadas
 function play(p) {
@@ -117,8 +88,8 @@ function play(p) {
             refreshBoard();
             checkWin = checkWinner ();
             if(checkWin != '') {
-                alert (checkWin + " venceu");
-                noWinner = false;
+            modalWindow();
+            noWinner = false;
             }
             cpuTurn();
         }
@@ -142,9 +113,11 @@ function cpuTurn (){
         } else if (level == 2) {
 
         }
+
         checkWin = checkWinner ();
         if(checkWin != '') {
-            alert (checkWin + "venceu");
+            modalWindow();
+            //alert (checkWin + "venceu");
             noWinner = false;
         }
         refreshBoard();
@@ -227,3 +200,24 @@ function startGame(){
 }
 
 window.addEventListener("load", startGame);
+
+
+//MODAL
+
+var modal = document.getElementById('modal-container');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+};
+
+
+function modalWindow() {
+    setTimeout(function(){
+        document.getElementById('modal-container').style.display='block'; 
+    }, 200);
+}
+
+
+
+

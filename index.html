@@ -47,6 +47,7 @@
 
   </div>
 
+
   
 
   <!--SCOREBOARD-->
@@ -63,15 +64,35 @@
   </aside>
 
 </section>
-    
+  
+
+
+
 <!--BUTTON START-->
 <div class="btn-block">
   <button id="button" type="button" class="btn" onclick="startGame()">start</button>
 </div>
    
+<!--MODAL ALERT-->
+
+<div id="modal-container" class="w3-modal">
+    
+  <div class="w3-modal-content w3-card-4">
+    <header class="w3-container"> 
+      <span onclick="document.getElementById('modal-container').style.display='none'" 
+      class="w3-button w3-display-topright">&times;
+      </span>
+      <h2>FULANO VENCEU!</h2>
+    </header>
+      
+    <div class="w3-container">
+      <p>colocar o placar atual aqui</p>
+    </div>
+  </div>
+</div>
+
+
 <script src="../Tic-Tac-Toe-Game/main.js" type="text/javascript"></script>
-
-
     
 </body>
 
