@@ -5,7 +5,7 @@ var game=[];
 var board=[];
 //indica a vez de quem joga
 var turnPlayer = 0; //0=jogador; 1=cpu
-//verifica se houve vencedor
+//verifica/retorna se houve vencedor
 var checkWin;
 //indica se o game é possivel ou se teve vencedor
 var noWinner = true;
@@ -13,6 +13,32 @@ var level = 1;
 //indica de forma aleatória a jogada do cpu
 var turnCpu = 1;
 var whoStart = 1;
+
+//var arrScorePlayer = [];
+//var arrScoreCPU = [];
+
+//var scorePlayerBoard,scoreCpuBoard;
+
+//function scoreBoardInput () {
+//    if( checkWin == 'X') {
+//      
+
+
+//scoreBoardInput();
+
+//FUNÇÕES TROCAM NÍVEL DO JOGO
+function levelOne() {
+    if (level = 2) {
+        level = 1;
+    }   
+}
+
+function levelTwo() {
+    if (level = 1) {
+        level = 2;
+    }
+}
+    
 
 //FUNÇÃO PARA PUXAR IMAGENS NO CLICK
 //const = img1
@@ -117,7 +143,6 @@ function cpuTurn (){
         checkWin = checkWinner ();
         if(checkWin != '') {
             modalWindow();
-            //alert (checkWin + "venceu");
             noWinner = false;
         }
         refreshBoard();
@@ -188,13 +213,11 @@ function startGame(){
     if(whoStart == 1) {
         whoStart = 0;
         turnPlayer = whoStart;
-        //FAZER ALERTA NA TELA
 
     //CPU COMEÇA
     } else {
         whoStart = 1;
         turnPlayer = whoStart;
-        //FAZER ALERTA NA TELA
         cpuTurn();
     }
 }
@@ -205,6 +228,7 @@ window.addEventListener("load", startGame);
 //MODAL
 
 var modal = document.getElementById('modal-container');
+
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
@@ -214,6 +238,7 @@ window.onclick = function(event) {
 
 function modalWindow() {
     setTimeout(function(){
+        document.getElementById('winner').innerHTML = "O vencedor foi " + checkWin + "!";
         document.getElementById('modal-container').style.display='block'; 
     }, 200);
 }

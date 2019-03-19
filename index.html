@@ -23,8 +23,8 @@
   
   <h3 id="10">tic tac toe game</h3>
     <div id="dvmenu">
-      <button  type="button" class="" >Level 1</button>
-      <button  type="button" class="" >Level 2</button>
+      <button id="level-one" type="button" class="" onclick="levelOne()">Level 1</button>
+      <button id="level-two" type="button" class="" onclick="levelTwo()">Level 2</button>
     </div>
  
 
@@ -58,8 +58,8 @@
     <div class="player">player</div>
     <div class="player">com</div>
   
-    <div class="score">4</div>
-    <div class="score">5</div>
+    <div id="id-score-player" class="score">4</div>
+    <div id="id-score-cpu"class="score">5</div>
 
   </aside>
 
@@ -82,7 +82,7 @@
       <span onclick="document.getElementById('modal-container').style.display='none'" 
       class="w3-button w3-display-topright">&times;
       </span>
-      <h2>FULANO VENCEU!</h2>
+      <h2 id="winner"></h2>
     </header>
       
     <div class="w3-container">
