@@ -14,17 +14,6 @@ var level = 1;
 var turnCpu = 1;
 var whoStart = 1;
 
-//var arrScorePlayer = [];
-//var arrScoreCPU = [];
-
-//var scorePlayerBoard,scoreCpuBoard;
-
-//function scoreBoardInput () {
-//    if( checkWin == 'X') {
-//      
-
-
-//scoreBoardInput();
 
 //FUNÇÕES TROCAM NÍVEL DO JOGO
 function levelOne() {
@@ -38,7 +27,10 @@ function levelTwo() {
         level = 2;
     }
 }
-    
+
+document.getElementById('id-score-player').innerHTML = xxx;
+document.getElementById('id-score-cpu').innerHTML = yyy;
+
 
 //FUNÇÃO PARA PUXAR IMAGENS NO CLICK
 //const = img1
@@ -133,7 +125,8 @@ function cpuTurn (){
                 line = Math.round(Math.random() * 2);
                 column = Math.round(Math.random() * 2);
             } while (game[line][column]!= '');
-            game[line][column] = "O";
+                game[line][column] = "O";
+            
 
         //NÍVEL 2
         } else if (level == 2) {

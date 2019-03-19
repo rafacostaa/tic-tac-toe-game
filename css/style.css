@@ -198,3 +198,20 @@ section{
     top:0;
     border: 1px solid red;
 }
+
+.player{
+    
+    
+
+}
+.player.one {
+    background: url('img/logo_lightblue.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.player.two{
+    background: url('img/logo_darkblue.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
