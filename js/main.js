@@ -21,6 +21,7 @@ var level = 1;
 var turnCpu = 1;
 var whoStart = 1;
 
+<<<<<<< HEAD:js/main.js
 
 //FUNÇÕES TROCAM NÍVEL DO JOGO
 function levelOne() {
@@ -39,6 +40,8 @@ function levelTwo() {
 // document.getElementById('id-score-cpu').innerHTML = yyy;
 
 
+=======
+>>>>>>> parent of 90ffecc... button levels done:main.js
 //FUNÇÃO PARA PUXAR IMAGENS NO CLICK
 //const = img1
 //const = img2
