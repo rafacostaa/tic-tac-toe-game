@@ -1,16 +1,11 @@
 
-// mapeia as posicoes, de 0 a 9
-// 0 1 2
-// 3 4 5
-// 6 7 8
-var positions = document.querySelectorAll('.item-board');
 //recebe o controle, guarda as posições das jogadas
 var game=[];
 //controla elementos HTML da variavel game
 var board=[];
 //indica a vez de quem joga
 var turnPlayer = 0; //0=jogador; 1=cpu
-//verifica/retorna se houve vencedor
+//verifica se houve vencedor
 var checkWin;
 //indica se o game é possivel ou se teve vencedor
 var noWinner = true;
@@ -19,6 +14,7 @@ var level = 1;
 var turnCpu = 1;
 var whoStart = 1;
 
+<<<<<<< HEAD:js/main.js
 
 //FUNÇÕES TROCAM NÍVEL DO JOGO
 function levelOne() {
@@ -33,10 +29,12 @@ function levelTwo() {
     }
 }
 
-// document.getElementById('id-score-player').innerHTML = xxx;
-// document.getElementById('id-score-cpu').innerHTML = yyy;
+document.getElementById('id-score-player').innerHTML = xxx;
+document.getElementById('id-score-cpu').innerHTML = yyy;
 
 
+=======
+>>>>>>> parent of 90ffecc... button levels done:main.js
 //FUNÇÃO PARA PUXAR IMAGENS NO CLICK
 //const = img1
 //const = img2
@@ -141,6 +139,7 @@ function cpuTurn (){
         checkWin = checkWinner ();
         if(checkWin != '') {
             modalWindow();
+            //alert (checkWin + "venceu");
             noWinner = false;
         }
         refreshBoard();
@@ -180,7 +179,7 @@ function refreshBoard () {
     for(var line = 0; line < 3; line++) {
         for(var column = 0; column < 3; column++){
             if(game[line][column] == 'X') {
-                board[line][column].className = 'one';
+                board[line][column].innerHTML = 'X';
             } else if (game[line][column] == 'O') {
                 board[line][column].innerHTML = 'O';
 
@@ -211,11 +210,13 @@ function startGame(){
     if(whoStart == 1) {
         whoStart = 0;
         turnPlayer = whoStart;
+        //FAZER ALERTA NA TELA
 
     //CPU COMEÇA
     } else {
         whoStart = 1;
         turnPlayer = whoStart;
+        //FAZER ALERTA NA TELA
         cpuTurn();
     }
 }
@@ -226,7 +227,6 @@ window.addEventListener("load", startGame);
 //MODAL
 
 var modal = document.getElementById('modal-container');
-
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
@@ -236,30 +236,10 @@ window.onclick = function(event) {
 
 function modalWindow() {
     setTimeout(function(){
-        document.getElementById('winner').innerHTML = "O vencedor foi " + checkWin + "!";
         document.getElementById('modal-container').style.display='block'; 
     }, 200);
 }
 
-
-/*
-positions.forEach(function(position, positionIndex) {
-    position.addEventListener('click', function playEvent(event) {
-        console.log(positionIndex);
-        var turnPlayerCssClass = '';
-        // Se for o jogador / pessoa
-        if (turnPlayer == 0) {
-            turnPlayerCssClass = 'one';
-            turnPlayer = 1; // muda vez para computador
-         
-        // se for computador
-        } else if (turnPlayer == 1){
-            turnPlayerCssClass = 'two';
-            turnPlayer = 0; // muda vez para pessoa
-        }
-        event.target.classList.add(turnPlayerCssClass);
-    });
-});*/
 
 
 
