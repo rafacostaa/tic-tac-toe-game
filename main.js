@@ -10,7 +10,7 @@ var game=[];
 var board=[];
 //indica a vez de quem joga
 var turnPlayer = 0; //0=jogador; 1=cpu
-//verifica/retorna se houve vencedor
+//verifica se houve vencedor
 var checkWin;
 //indica se o game é possivel ou se teve vencedor
 var noWinner = true;
@@ -19,6 +19,7 @@ var level = 1;
 var turnCpu = 1;
 var whoStart = 1;
 
+<<<<<<< HEAD
 
 //FUNÇÕES TROCAM NÍVEL DO JOGO
 function levelOne() {
@@ -37,6 +38,8 @@ function levelTwo() {
 // document.getElementById('id-score-cpu').innerHTML = yyy;
 
 
+=======
+>>>>>>> parent of 90ffecc... button levels done
 //FUNÇÃO PARA PUXAR IMAGENS NO CLICK
 //const = img1
 //const = img2
@@ -141,6 +144,7 @@ function cpuTurn (){
         checkWin = checkWinner ();
         if(checkWin != '') {
             modalWindow();
+            //alert (checkWin + "venceu");
             noWinner = false;
         }
         refreshBoard();
@@ -211,11 +215,13 @@ function startGame(){
     if(whoStart == 1) {
         whoStart = 0;
         turnPlayer = whoStart;
+        //FAZER ALERTA NA TELA
 
     //CPU COMEÇA
     } else {
         whoStart = 1;
         turnPlayer = whoStart;
+        //FAZER ALERTA NA TELA
         cpuTurn();
     }
 }
@@ -226,7 +232,6 @@ window.addEventListener("load", startGame);
 //MODAL
 
 var modal = document.getElementById('modal-container');
-
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
@@ -236,7 +241,6 @@ window.onclick = function(event) {
 
 function modalWindow() {
     setTimeout(function(){
-        document.getElementById('winner').innerHTML = "O vencedor foi " + checkWin + "!";
         document.getElementById('modal-container').style.display='block'; 
     }, 200);
 }
