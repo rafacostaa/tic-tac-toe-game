@@ -3,7 +3,9 @@
 // 0 1 2
 // 3 4 5
 // 6 7 8
-var positions = document.querySelectorAll('.item-board');
+//var positions = document.querySelectorAll('.item-board');
+
+
 //recebe o controle, guarda as posições das jogadas
 var game=[];
 //controla elementos HTML da variavel game
@@ -19,7 +21,6 @@ var level = 1;
 var turnCpu = 1;
 var whoStart = 1;
 
-<<<<<<< HEAD
 
 //FUNÇÕES TROCAM NÍVEL DO JOGO
 function levelOne() {
@@ -38,8 +39,6 @@ function levelTwo() {
 // document.getElementById('id-score-cpu').innerHTML = yyy;
 
 
-=======
->>>>>>> parent of 90ffecc... button levels done
 //FUNÇÃO PARA PUXAR IMAGENS NO CLICK
 //const = img1
 //const = img2
@@ -184,7 +183,7 @@ function refreshBoard () {
     for(var line = 0; line < 3; line++) {
         for(var column = 0; column < 3; column++){
             if(game[line][column] == 'X') {
-                board[line][column].className = 'one';
+                board[line][column].className = 'X';
             } else if (game[line][column] == 'O') {
                 board[line][column].innerHTML = 'O';
 
