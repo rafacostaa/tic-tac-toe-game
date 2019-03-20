@@ -21,27 +21,6 @@ var level = 1;
 var turnCpu = 1;
 var whoStart = 1;
 
-<<<<<<< HEAD:js/main.js
-
-//FUNÇÕES TROCAM NÍVEL DO JOGO
-function levelOne() {
-    if (level = 2) {
-        level = 1;
-    }   
-}
-
-function levelTwo() {
-    if (level = 1) {
-        level = 2;
-    }
-}
-
-// document.getElementById('id-score-player').innerHTML = xxx;
-// document.getElementById('id-score-cpu').innerHTML = yyy;
-
-
-=======
->>>>>>> parent of 90ffecc... button levels done:main.js
 //FUNÇÃO PARA PUXAR IMAGENS NO CLICK
 //const = img1
 //const = img2
@@ -186,7 +165,7 @@ function refreshBoard () {
     for(var line = 0; line < 3; line++) {
         for(var column = 0; column < 3; column++){
             if(game[line][column] == 'X') {
-                board[line][column].className = 'X';
+                board[line][column].innerHTML = 'X';
             } else if (game[line][column] == 'O') {
                 board[line][column].innerHTML = 'O';
 
